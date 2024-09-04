@@ -42,6 +42,7 @@ Sintaksa:
     def imeFunkcije(argument1, argument2):
         ukaz 1
         ukaz 2
+        return nekaj
 
 Prvi line je _header_ funkcije, ki se začne z `def` in konča z `:`. Vse naslednje vrstice morajo biti indented 4 mesta.
 
@@ -50,6 +51,7 @@ V interpreterju bo izgledalo tako:
     >>> def imeFunkcije(argument1, argument2):
     ...     ukaz 1
     ...     ukaz 2
+    ...     return nekaj
     ...
 
 Da jo končaš, vstaviš prazno vrstico na koncu. Zdaj obstaja nek objekt tipa **funkcija**.
@@ -58,6 +60,13 @@ Da jo končaš, vstaviš prazno vrstico na koncu. Zdaj obstaja nek objekt tipa *
     <class 'function'>
 
 Prav tako je pomembno, da definiraš funkcije preden jih pokličeš (tako kot moraš importat modul), drugače compiler ne ve kaj je ta stvar.
+
+Funkcija bo izvedla vse ukaze in se zaprla, če ni return ukaza. Da jo končaš prej, lahko daš return prej v funkciji
+
+    def func():
+        ukaz1
+        return
+        ukaz 2      # ne bo se izvedel
 
 ---
 

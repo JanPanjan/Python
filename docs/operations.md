@@ -17,6 +17,15 @@ Ampak notice, da preden deli, pretvori števila v `float`, zato je rezultat deci
 
 Prav tako dobiš `ZeroDivisionError`, če probaš delit z 0.
 
+Da dobiš celo število po deljenju, uporabi `//`. Primer:
+
+    >>> 105 / 60
+    1.75
+    >>> 105 // 60 
+    1
+
+>Ne deluje s float števili.
+
 ---
 
 Eksponente pišeš z `**`:
@@ -31,6 +40,11 @@ Modulo operator je uporaben, ko hočeš, da se nekaj zgodi vsak _nth_ time. Npr.
     število % 7 == 0
 
 se bo nekaj zgodilo.
+
+Prav tako lahko dobiš število po decimalki z modulo operatorjem. Če imaš `x = 10.21`:
+
+    >>> x % 10
+    0.21000000000000085
 
 ---
 
@@ -53,5 +67,4 @@ Znak `*` uporabljen s strings pomeni _repetition_ - nek string se bo ponovil `* 
     >>> a = "Bugga"
     >>> a * 3
     'BuggaBuggaBugga'
-
 

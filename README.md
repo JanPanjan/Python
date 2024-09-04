@@ -13,3 +13,9 @@ Mislim, da je built on C. Prav tako eden najbolj razširjenih in populanrih jezi
 3. [variables](docs/variables.md) 
 4. [operations](docs/operations.md) 
 5. [functions](docs/functions.md) 
+6. [conditional](docs/conditional.md) 
+7. [input](docs/input.md) 
+
+# Case studies
+
+- [interface design](case-studies/interface-design/README.md) 

@@ -1,0 +1,5 @@
+- recursion primeri
+- input primeri
+- vaje z želvicami
+- vaje na koncu 5.5
+- fruitful functions
