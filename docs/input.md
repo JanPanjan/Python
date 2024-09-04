@@ -6,3 +6,5 @@ S funkcijo `input` lahko skozi terminal podamo nek niz programu. Če zahtevaš �
     in = int(in)
 
 Če ni podal številke, bo vrnilo error `ValueError: invalid literal for int() with base 10`.
+
+#
