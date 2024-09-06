@@ -15,6 +15,8 @@ Mislim, da je built on C. Prav tako eden najbolj razširjenih in populanrih jezi
 5. [functions](docs/functions.md) 
 6. [conditional](docs/conditional.md) 
 7. [input](docs/input.md) 
+8. [loops](docs/loops.md) 
+9. [strings](docs/strings.md) 
 
 # Case studies
 
