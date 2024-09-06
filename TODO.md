@@ -1,2 +1,3 @@
 - vaje na koncu 5.5
+- vaje na koncu 6
 - fruitful functions

@@ -68,6 +68,34 @@ Funkcija bo izvedla vse ukaze in se zaprla, če ni return ukaza. Da jo končaš 
         return
         ukaz 2      # ne bo se izvedel
 
----
+Koda, ki se pojavi po return ukazu se imenuje _Dead code_.
 
-Glej [scope](docs/scope.md) 
+## Return values and expressions
+
+Funckije v pythonu, ki so void (`return` brez vsega), vrnejo `None` type, drugače pa lahko vrnejo funkcije vrednosti. 
+
+## Debugging
+
+Tmp variables so priročne pri debugganju funkcij, namesto da clusterfuckaš vse v return statement.
+
+Prav tako je pomembno, da testiraš program del po del. Da ne izgradiš celega naenkrat, ampak najprej preveriš, če dela osnovna funkcionalnost in nato dodajah funkcije.
+
+Debugging ko uporabljaš print da prikažeš kaj se dogaja z vrednostmi, se imenuje _Scaffolding_.
+
+## Boolean functions
+
+Primerne kot utility functions I guess. Npr.:
+
+    def is_divisible(x,y):
+        if x % y == 0:
+            return True
+        else
+            return False
+
+Zgornjo funkcijo lahko napišemo krajše, tako da vrnemo kaj bo evaluacija conditiona:
+
+    def is_divisible(x,y):
+        return x % y == 0
+
+Prav tako je primerno, da so imena taka kot _yes/no_ vprašanja, saj se vrne ja ali ne.
+
