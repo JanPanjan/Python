@@ -1,5 +1,5 @@
 - vaje na koncu 5.5
 - vaje na koncu 6
-- fruitful functions
 - loops primeri
 - square root primer (str 67)
+- vaje 9.2
