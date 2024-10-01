@@ -24,24 +24,22 @@ def calculator():
     num2 = nums[1]
     operation = get_operation_input()
 
+    print("Rezultat: ", end='')
     if operation == '+':
-        print("Rezultat: ", end='')
         print(num1 + num2)
         return 
     elif operation == '-':
-        print("Rezultat: ", end='')
         print(num1 - num2)
         return 
     elif operation == '*':
-        print("Rezultat: ", end='')
         print(num1 * num2)
         return 
     elif operation == '/':
-        print("Rezultat: ", end='')
         print(num1 / num2)
         return 
     else:
         print("error in operation input.")
+        return
 
 calculator()
 

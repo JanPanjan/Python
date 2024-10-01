@@ -3,14 +3,12 @@ import math
 
 bob = turtle.Turtle()
 
-# naredi funkcijo square, ki naredi square glede na lenght parameter in t ki je turtle
 def square(t, lenght):
     """Tvoja želvica naredi lep kvadrat"""
     for i in range(4):
         t.forward(lenght)
         t.left(90)
 
-# naredi poligon glede na n - število stranic
 def polygon(t, lenght, n):
     """Tvoja želvica bo naredila lep pravilen poligon"""
     for i in range(n):
@@ -23,7 +21,6 @@ def initCircle(t, radius):
     t.forward(radius)
     t.left(90)
 
-# naredi krog iz radiusa
 def circle(t, radius):
     """Tvoja želvica naredi lep krog"""
     initCircle(t, radius)
@@ -36,7 +33,6 @@ def circle(t, radius):
         t.forward(enota)
         t.left(1)
 
-# circle, ki uporabi poligon
 def modCircle(t, radius):
     """Circle, le da uporabimo poligon funkcijo"""
     t.forward(radius)

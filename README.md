@@ -4,7 +4,7 @@
 [codecademy](https://www.codecademy.com/learn) 
 [Python_docs](https://www.codecademy.com/resources/docs/python?page_ref=catalog) 
 
-Mislim, da je built on C. Prav tako eden najbolj razširjenih in populanrih jezikov na svetu. Veliko se uporablja v svetu bioinformatike. Zdi se mi priročno ga znat zaradi machine learning.
+Mislim, da je built on C. Prav tako eden najbolj razširjenih in populanrih jezikov na svetu. Veliko se uporablja v svetu bioinformatike. Zdi se mi priročno ga znat zaradi simple scripts, ki so tudi readable mostly.
 
 ---
 
