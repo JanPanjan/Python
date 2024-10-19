@@ -1,0 +1,175 @@
+---
+author: "Jan Panjan"
+date: "10/13/2024"
+title: "Python notes"
+format:
+  html:
+    toc: true
+execute: 
+  warning: false
+  message: false
+  error: true
+  echo: true
+---
+
+### Opomba
+
+Tu ne bo vse o pythonu, samo tisto kar si ne zapomnem oziroma se učim.
+
+---
+
+# Touples in lists
+
+Razlika med njima: touples so immutable.
+
+```{python}
+to = ("anja", "jan")
+print(to)
+to[0] = "miha"
+```
+
+```{python}
+ti = ["anja", "jan"]
+ti[0] = "miha"
+print(ti)
+```
+
+# Count
+
+Prešteje število ponovitev enakih elementov. Vrne integer.
+
+```{python}
+tabar = ("sardele", "jabolka", "sardele", "tatar", "raža", "sardele")
+print(tabar.count("sardele"))
+```
+
+# Index
+
+Vrne index elementa. Vrne integer. Če je več enakih elementov, vrne samo 
+prvi indeks.
+
+```{python}
+tabar = ("sardele", "jabolka", "sardele", "tatar", "raža", "sardele")
+print(tabar.index("sardele"))
+```
+
+# Dictionary ali slovar
+
+Key-value struktura. Elemente prikličemo s key vrednostjo. Kot named vector
+v R-ju.
+
+`slovar = { key : value }`
+
+```{python}
+slovarcek = {'filip':'gey', 'jan':'verygay'}
+print(slovarcek['filip'])
+
+mlamla = {'filip':[1,2,3], 'jan':['handsom', 'amazing', 'hell yeha']}
+print(mlamla['filip'])
+print(mlamla['jan'])
+print(mlamla['jan'][2])
+```
+
+Lahko ga najprej definiraš in nato assignaš keys, kot bi lahko
+z listi npr.
+
+```{python}
+mimi = {}
+mimi['lana'] = 'pipika :)'
+mimi['leo'] = 'chan :3'
+print(mimi)
+```
+
+Kot `names()` lahko uporabiš v pythonu `keys`, ki vrne *dict_keys* objekt.
+
+```{python}
+print(mimi.keys())
+print(type(mimi.keys()))
+
+```
+
+`Values` in `items` vrneta ostali dve stvari.
+
+```{python}
+print(mimi.values())
+print(type(mimi.values()))
+print(mimi.items())
+print(type(mimi.items()))
+```
+
+# LIST COMPREHENSION
+
+new_list = \[expression for item in iterable if condition]
+
+- expression: The operation applied to each item (this can be as simple as returning the item itself or modifying it).
+- item: The variable that takes the value of each element in the iterable.
+- iterable: The collection or sequence you are iterating over (like a list, string, or range).
+- condition: (Optional) A filter to include only certain items based on some criteria.
+
+```{python} 
+data = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# list comprehension
+# new_list = [expression for item in iterable if condition]
+
+# first two rows
+print(data[:2])
+
+# first two columns
+print([row[:2] for row in data])
+
+# 2x2 matrix, top left corner
+print([row[:2] for row in data[:2]])
+
+# flattened list
+print([item for row in data for item in row])
+
+# basic cases
+print([x for x in range(0, 5)])
+print([x ** 2 for x in range(0, 5)])
+print([x for x in range(0, 5) if x > 3])
+print([x for x in [1, 2, 3, 4, 5] if x % 2 == 0])
+
+# strings
+print([char for char in "jan"])
+print([char for char in "jan" if char.isupper()])
+print([char for char in "jan" if char.islower()])
+```
+
+# Python gotcha
+
+[funckije v pythonu so objekti, ne samo nek kos kode](https://stackoverflow.com/questions/1132941/least-astonishment-and-the-mutable-default-argument)
+
+# *Args
+
+Unpacking operator * (variable number of arguments). Pošljemo več parametrov v 
+funkcijo z enim argumentom. Vrne touple.
+
+```{python} 
+def example(*args):
+    print(args)
+    return
+
+example("tvoja", "mama", 35, True)
+```
+
+# **Kwargs
+
+Keyword args... Basically, zdaj lahko daš parametrom še imena. Namesto touple, se shranijo
+v dictionary.
+
+```{python}
+def kwadfs(**kwargs):
+    print(kwargs)
+    # pogledamo, če obstaja key "ta_jajca"
+    print(kwargs.get("ta_jajca"))
+    # pogledamo, če obstaja key "tvoja_mama"
+    print(kwargs.get("tvoja_mama"))
+    return
+
+kwadfs(ta_jajca = 999, moja_mama = "Nuša")
+```
