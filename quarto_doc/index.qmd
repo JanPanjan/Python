@@ -8,7 +8,7 @@ format:
 execute: 
   warning: false
   message: false
-  error: true
+  error: false
   echo: true
 ---
 
@@ -16,17 +16,16 @@ execute:
 
 Tu ne bo vse o pythonu, samo tisto kar si ne zapomnem oziroma se učim.
 
+- [codecademy](https://www.codecademy.com/learn) 
+- [Python_docs](https://www.codecademy.com/resources/docs/python?page_ref=catalog) 
+- [pythong built in functiosn](https://www.codecademy.com/resources/docs/python/built-in-functions)
+
 ---
 
-# Touples in lists
+# Tuples in lists
 
-Razlika med njima: touples so immutable.
+Razlika med njima: tuples so immutable.
 
-```{python}
-to = ("anja", "jan")
-print(to)
-to[0] = "miha"
-```
 
 ```{python}
 ti = ["anja", "jan"]
@@ -97,6 +96,24 @@ print(mimi.items())
 print(type(mimi.items()))
 ```
 
+Iteracije čez elemente so različne glede na uporabljeno funkcijo.
+
+```{python}
+data = {'jan':10, 'filip':11, 'miha':12}
+
+for i in data:
+    print(i)
+
+for i in data.keys():
+    print(i)
+
+for i in data.items():
+    print(i)
+
+for i in data.values():
+    print(i)
+```
+
 # LIST COMPREHENSION
 
 new_list = \[expression for item in iterable if condition]
@@ -106,7 +123,7 @@ new_list = \[expression for item in iterable if condition]
 - iterable: The collection or sequence you are iterating over (like a list, string, or range).
 - condition: (Optional) A filter to include only certain items based on some criteria.
 
-```{python} 
+```{python}
 data = [
     [1, 2, 3],
     [4, 5, 6],
@@ -149,7 +166,7 @@ print([char for char in "jan" if char.islower()])
 Unpacking operator * (variable number of arguments). Pošljemo več parametrov v 
 funkcijo z enim argumentom. Vrne touple.
 
-```{python} 
+```{python}
 def example(*args):
     print(args)
     return
@@ -172,4 +189,62 @@ def kwadfs(**kwargs):
     return
 
 kwadfs(ta_jajca = 999, moja_mama = "Nuša")
+```
+
+Lahko kombiniramo pozicijske argumente s kwargs. Pozicijski morajo biti pred imenovanimi
+parametri.
+
+```{python}
+def new_kwadfs(extra, **kwargs):
+    print(extra)
+    print(kwargs)
+    # pogledamo, če obstaja key "ta_jajca"
+    print(kwargs.get("ta_jajca"))
+    # pogledamo, če obstaja key "tvoja_mama"
+    print(kwargs.get("tvoja_mama"))
+    return
+
+new_kwadfs("burger", ta_jajca = 999, moja_mama = "Nuša")
+```
+
+Standard order argumentov:
+
+1. positional arguments
+2. *args
+3. keyword arguments
+4. **kwags
+
+## Aplications z built in funkcijami
+
+```{python}
+l = [3,6]
+
+print(l)
+print(*l)
+list(range(*l))
+```
+
+---
+
+R:
+
+```{r}
+vec <- c(1,2,3)
+vec2 <- c(0, vec)
+
+vec2
+```
+
+Python ekvivalentno z args operatorjem:
+
+```{python}
+vec = (1, 2, 3)
+vec2 = (0, *vec)
+```
+
+Brez `*` operatorja, bi dobili tuple znotraj tupla.
+
+```{python}
+vec = (1, 2, 3)
+vec2 = (0, vec)
 ```

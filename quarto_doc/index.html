@@ -89,7 +89,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#list-comprehension" id="toc-list-comprehension" class="nav-link" data-scroll-target="#list-comprehension">LIST COMPREHENSION</a></li>
   <li><a href="#python-gotcha" id="toc-python-gotcha" class="nav-link" data-scroll-target="#python-gotcha">Python gotcha</a></li>
   <li><a href="#args" id="toc-args" class="nav-link" data-scroll-target="#args">*Args</a></li>
-  <li><a href="#kwargs" id="toc-kwargs" class="nav-link" data-scroll-target="#kwargs">**Kwargs</a></li>
+  <li><a href="#kwargs" id="toc-kwargs" class="nav-link" data-scroll-target="#kwargs">**Kwargs</a>
+  <ul class="collapse">
+  <li><a href="#operacije-z-built-in-funkcijami" id="toc-operacije-z-built-in-funkcijami" class="nav-link" data-scroll-target="#operacije-z-built-in-funkcijami">Operacije z built in funkcijami</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -129,12 +132,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="opomba" class="level3">
 <h3 class="anchored" data-anchor-id="opomba">Opomba</h3>
 <p>Tu ne bo vse o pythonu, samo tisto kar si ne zapomnem oziroma se učim.</p>
+<ul>
+<li><a href="https://www.codecademy.com/learn">codecademy</a></li>
+<li><a href="https://www.codecademy.com/resources/docs/python?page_ref=catalog">Python_docs</a></li>
+<li><a href="https://www.codecademy.com/resources/docs/python/built-in-functions">pythong built in functiosn</a></li>
+</ul>
 <hr>
 </section>
 <section id="touples-in-lists" class="level1">
 <h1>Touples in lists</h1>
 <p>Razlika med njima: touples so immutable.</p>
-<div id="d0bb4b80" class="cell" data-execution_count="1">
+<div id="459cde18" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>to <span class="op">=</span> (<span class="st">"anja"</span>, <span class="st">"jan"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(to)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>to[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"miha"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -145,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>TypeError: 'tuple' object does not support item assignment</code></pre>
 </div>
 </div>
-<div id="fb5f5b56" class="cell" data-execution_count="2">
+<div id="9407cb52" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ti <span class="op">=</span> [<span class="st">"anja"</span>, <span class="st">"jan"</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>ti[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"miha"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ti)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -157,7 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="count" class="level1">
 <h1>Count</h1>
 <p>Prešteje število ponovitev enakih elementov. Vrne integer.</p>
-<div id="c2e583df" class="cell" data-execution_count="3">
+<div id="1cfce1de" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tabar <span class="op">=</span> (<span class="st">"sardele"</span>, <span class="st">"jabolka"</span>, <span class="st">"sardele"</span>, <span class="st">"tatar"</span>, <span class="st">"raža"</span>, <span class="st">"sardele"</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabar.count(<span class="st">"sardele"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -168,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="index" class="level1">
 <h1>Index</h1>
 <p>Vrne index elementa. Vrne integer. Če je več enakih elementov, vrne samo prvi indeks.</p>
-<div id="23fb4a8a" class="cell" data-execution_count="4">
+<div id="9061e44e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tabar <span class="op">=</span> (<span class="st">"sardele"</span>, <span class="st">"jabolka"</span>, <span class="st">"sardele"</span>, <span class="st">"tatar"</span>, <span class="st">"raža"</span>, <span class="st">"sardele"</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tabar.index(<span class="st">"sardele"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -180,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Dictionary ali slovar</h1>
 <p>Key-value struktura. Elemente prikličemo s key vrednostjo. Kot named vector v R-ju.</p>
 <p><code>slovar = { key : value }</code></p>
-<div id="09e6c168" class="cell" data-execution_count="5">
+<div id="e577bd95" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>slovarcek <span class="op">=</span> {<span class="st">'filip'</span>:<span class="st">'gey'</span>, <span class="st">'jan'</span>:<span class="st">'verygay'</span>}</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(slovarcek[<span class="st">'filip'</span>])</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -196,7 +204,7 @@ hell yeha</code></pre>
 </div>
 </div>
 <p>Lahko ga najprej definiraš in nato assignaš keys, kot bi lahko z listi npr.</p>
-<div id="9789231a" class="cell" data-execution_count="6">
+<div id="a61ce91e" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mimi <span class="op">=</span> {}</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mimi[<span class="st">'lana'</span>] <span class="op">=</span> <span class="st">'pipika :)'</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>mimi[<span class="st">'leo'</span>] <span class="op">=</span> <span class="st">'chan :3'</span></span>
@@ -206,7 +214,7 @@ hell yeha</code></pre>
 </div>
 </div>
 <p>Kot <code>names()</code> lahko uporabiš v pythonu <code>keys</code>, ki vrne <em>dict_keys</em> objekt.</p>
-<div id="d836a32b" class="cell" data-execution_count="7">
+<div id="08bc4352" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mimi.keys())</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(mimi.keys()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -215,7 +223,7 @@ hell yeha</code></pre>
 </div>
 </div>
 <p><code>Values</code> in <code>items</code> vrneta ostali dve stvari.</p>
-<div id="de865682" class="cell" data-execution_count="8">
+<div id="b4426a0f" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mimi.values())</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(mimi.values()))</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mimi.items())</span>
@@ -225,6 +233,36 @@ hell yeha</code></pre>
 &lt;class 'dict_values'&gt;
 dict_items([('lana', 'pipika :)'), ('leo', 'chan :3')])
 &lt;class 'dict_items'&gt;</code></pre>
+</div>
+</div>
+<p>Iteracije čez elemente so različne glede na uporabljeno funkcijo.</p>
+<div id="c73484e0" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'jan'</span>:<span class="dv">10</span>, <span class="st">'filip'</span>:<span class="dv">11</span>, <span class="st">'miha'</span>:<span class="dv">12</span>}</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> data:</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> data.keys():</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> data.items():</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> data.values():</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>jan
+filip
+miha
+jan
+filip
+miha
+('jan', 10)
+('filip', 11)
+('miha', 12)
+10
+11
+12</code></pre>
 </div>
 </div>
 </section>
@@ -237,38 +275,38 @@ dict_items([('lana', 'pipika :)'), ('leo', 'chan :3')])
 <li>iterable: The collection or sequence you are iterating over (like a list, string, or range).</li>
 <li>condition: (Optional) A filter to include only certain items based on some criteria.</li>
 </ul>
-<div id="d505c314" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># list comprehension</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co"># new_list = [expression for item in iterable if condition]</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># first two rows</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[:<span class="dv">2</span>])</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># first two columns</span></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([row[:<span class="dv">2</span>] <span class="cf">for</span> row <span class="kw">in</span> data])</span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 2x2 matrix, top left corner</span></span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([row[:<span class="dv">2</span>] <span class="cf">for</span> row <span class="kw">in</span> data[:<span class="dv">2</span>]])</span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="co"># flattened list</span></span>
-<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([item <span class="cf">for</span> row <span class="kw">in</span> data <span class="cf">for</span> item <span class="kw">in</span> row])</span>
-<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a><span class="co"># basic cases</span></span>
-<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>)])</span>
-<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>)])</span>
-<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>) <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">3</span>])</span>
-<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>] <span class="cf">if</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>])</span>
-<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a><span class="co"># strings</span></span>
-<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([char <span class="cf">for</span> char <span class="kw">in</span> <span class="st">"jan"</span>])</span>
-<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([char <span class="cf">for</span> char <span class="kw">in</span> <span class="st">"jan"</span> <span class="cf">if</span> char.isupper()])</span>
-<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([char <span class="cf">for</span> char <span class="kw">in</span> <span class="st">"jan"</span> <span class="cf">if</span> char.islower()])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="2df4dc49" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># list comprehension</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># new_list = [expression for item in iterable if condition]</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="co"># first two rows</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[:<span class="dv">2</span>])</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co"># first two columns</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([row[:<span class="dv">2</span>] <span class="cf">for</span> row <span class="kw">in</span> data])</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 2x2 matrix, top left corner</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([row[:<span class="dv">2</span>] <span class="cf">for</span> row <span class="kw">in</span> data[:<span class="dv">2</span>]])</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co"># flattened list</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([item <span class="cf">for</span> row <span class="kw">in</span> data <span class="cf">for</span> item <span class="kw">in</span> row])</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="co"># basic cases</span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>)])</span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="op">**</span> <span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>)])</span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">5</span>) <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">3</span>])</span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>] <span class="cf">if</span> x <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span>])</span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a><span class="co"># strings</span></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([char <span class="cf">for</span> char <span class="kw">in</span> <span class="st">"jan"</span>])</span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([char <span class="cf">for</span> char <span class="kw">in</span> <span class="st">"jan"</span> <span class="cf">if</span> char.isupper()])</span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([char <span class="cf">for</span> char <span class="kw">in</span> <span class="st">"jan"</span> <span class="cf">if</span> char.islower()])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1, 2, 3], [4, 5, 6]]
 [[1, 2], [4, 5], [7, 8]]
@@ -291,12 +329,12 @@ dict_items([('lana', 'pipika :)'), ('leo', 'chan :3')])
 <section id="args" class="level1">
 <h1>*Args</h1>
 <p>Unpacking operator * (variable number of arguments). Pošljemo več parametrov v funkcijo z enim argumentom. Vrne touple.</p>
-<div id="308dd730" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> example(<span class="op">*</span>args):</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(args)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>example(<span class="st">"tvoja"</span>, <span class="st">"mama"</span>, <span class="dv">35</span>, <span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1de6a16d" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> example(<span class="op">*</span>args):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(args)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>example(<span class="st">"tvoja"</span>, <span class="st">"mama"</span>, <span class="dv">35</span>, <span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>('tvoja', 'mama', 35, True)</code></pre>
 </div>
@@ -305,22 +343,65 @@ dict_items([('lana', 'pipika :)'), ('leo', 'chan :3')])
 <section id="kwargs" class="level1">
 <h1>**Kwargs</h1>
 <p>Keyword args… Basically, zdaj lahko daš parametrom še imena. Namesto touple, se shranijo v dictionary.</p>
-<div id="5d221d32" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> kwadfs(<span class="op">**</span>kwargs):</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pogledamo, če obstaja key "ta_jajca"</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs.get(<span class="st">"ta_jajca"</span>))</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pogledamo, če obstaja key "tvoja_mama"</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs.get(<span class="st">"tvoja_mama"</span>))</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>kwadfs(ta_jajca <span class="op">=</span> <span class="dv">999</span>, moja_mama <span class="op">=</span> <span class="st">"Nuša"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="e0cbfb4a" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> kwadfs(<span class="op">**</span>kwargs):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pogledamo, če obstaja key "ta_jajca"</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs.get(<span class="st">"ta_jajca"</span>))</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pogledamo, če obstaja key "tvoja_mama"</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs.get(<span class="st">"tvoja_mama"</span>))</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>kwadfs(ta_jajca <span class="op">=</span> <span class="dv">999</span>, moja_mama <span class="op">=</span> <span class="st">"Nuša"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{'ta_jajca': 999, 'moja_mama': 'Nuša'}
 999
 None</code></pre>
 </div>
 </div>
+<p>Lahko kombiniramo pozicijske argumente s kwargs. Pozicijski morajo biti pred imenovanimi parametri.</p>
+<div id="6ad9e253" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> new_kwadfs(extra, <span class="op">**</span>kwargs):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(extra)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pogledamo, če obstaja key "ta_jajca"</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs.get(<span class="st">"ta_jajca"</span>))</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># pogledamo, če obstaja key "tvoja_mama"</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs.get(<span class="st">"tvoja_mama"</span>))</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>new_kwadfs(<span class="st">"burger"</span>, ta_jajca <span class="op">=</span> <span class="dv">999</span>, moja_mama <span class="op">=</span> <span class="st">"Nuša"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>burger
+{'ta_jajca': 999, 'moja_mama': 'Nuša'}
+999
+None</code></pre>
+</div>
+</div>
+<p>Standard order argumentov:</p>
+<ol type="1">
+<li>positional arguments</li>
+<li>*args</li>
+<li>keyword arguments</li>
+<li>**kwags</li>
+</ol>
+<section id="operacije-z-built-in-funkcijami" class="level2">
+<h2 class="anchored" data-anchor-id="operacije-z-built-in-funkcijami">Operacije z built in funkcijami</h2>
+<div id="c1719a9d" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> [<span class="dv">3</span>,<span class="dv">6</span>]</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(l)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="op">*</span>l)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="op">*</span>l))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[3, 6]
+3 6</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>[3, 4, 5]</code></pre>
+</div>
+</div>
+</section>
 </section>
 
 </main>
